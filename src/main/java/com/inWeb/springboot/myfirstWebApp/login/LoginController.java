@@ -33,11 +33,11 @@ public class LoginController {
         if(authenticationService.authenticate(name, password)) {
 
             model.put("name", name);
-            model.put("password", password);
 
 
             return "welcome";
         }
+        model.put("errormessage","invalid credentials!plese try again.");
 
         return "login";
     }
