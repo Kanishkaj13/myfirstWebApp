@@ -1,11 +1,13 @@
 package com.inWeb.springboot.myfirstWebApp.Todo;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 @Service
+@SessionAttributes("name")
 public class TodoService {
     private static List<Todo> todos = new ArrayList<>();
 
